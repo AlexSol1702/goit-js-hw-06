@@ -5,8 +5,8 @@ const refs = {
 
 
 refs.inputName.addEventListener("input", (event) => { 
-    
-    refs.outputName.textContent = event.currentTarget.value;
-   
+    if (event.target.value !== '') {
+        refs.outputName.textContent = event.target.value;
+    } else {refs.outputName.textContent = 'Anonymous'};
 });
 
